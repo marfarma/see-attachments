@@ -1,4 +1,4 @@
-=== Find replace ===
+=== See attachments ===
 Contributors: Ramon Fincken
 Donate link: http://donate.ramonfincken.com
 Tags: post,page,attach,attachment,see,view,list,show
