@@ -6,11 +6,11 @@ Requires at least: 2.0.2
 Tested up to: 3.0.2
 Stable tag: 1.1
 
-Shows all attachments for a post or page in a box.
+Shows all attachments for a post or page in a box on the edit page.
 
 == Description ==
 
-Shows all attachments for a post or page in a box.
+Shows all attachments for a post or page in a box on the edit page.
 
 <br>
 <br>Images by: <a href="http://24charlie.deviantart.com/art/Black-Pearl-Files-78798192">24charlie.deviantart.com</a>
