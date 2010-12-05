@@ -39,6 +39,6 @@ Upgrade with better framework inclusion
 == Screenshots ==
 
 1. Default view
-<a href="http://s.wordpress.org/extend/plugins/see-attachments/screenshot-1.png">Fullscreen Screenshot 1</a><br>
+<a href="http://s.wordpress.org/extend/plugins/see-attachments/screenshot-1.png?r=319336">Fullscreen Screenshot 1</a><br>
 2. Box in sidebar
-<a href="http://s.wordpress.org/extend/plugins/see-attachments/screenshot-2.png">Fullscreen Screenshot 2</a><br>
+<a href="http://s.wordpress.org/extend/plugins/see-attachments/screenshot-2.png?r=319336">Fullscreen Screenshot 2</a><br>
