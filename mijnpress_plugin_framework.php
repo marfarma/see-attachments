@@ -35,6 +35,7 @@
  * 1.3
  * Added: get_plugin_url : $file = __FILE__
  * > To fix when multiple plugins use this framework.
+ * Added: 'See attachments'
  * ------------------------------------------------------------------
  * 
  */
@@ -47,7 +48,7 @@ class mijnpress_plugin_framework
 {
     var $showcredits = true;
     var $showcredits_fordevelopers = true;
-    var $all_plugins = array('Admin renamer extended','Find replace','Simple add pages or posts','Force apply terms and conditions','GTmetrix website performance','Antispam for all fields','Mass Delete Tags','Auto Prune Posts','Warm cache');
+    var $all_plugins = array('Admin renamer extended','Find replace','Simple add pages or posts','Force apply terms and conditions','GTmetrix website performance','Antispam for all fields','Mass Delete Tags','Auto Prune Posts','Warm cache','See attachments');
     
     /**
      * Left menu display in Plugin menu
