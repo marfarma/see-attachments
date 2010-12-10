@@ -3,7 +3,7 @@ Contributors: Ramon Fincken
 Donate link: http://donate.ramonfincken.com
 Tags: post,page,attach,attachment,see,view,list,show
 Requires at least: 2.0.2
-Tested up to: 3.0.2
+Tested up to: 3.0.3
 Stable tag: 1.2
 
 Shows all attachments for a post or page in a box on the edit page.
@@ -14,7 +14,7 @@ Shows all attachments for a post or page in a box on the edit page.
 
 <br>
 <br>Images by: <a href="http://24charlie.deviantart.com/art/Black-Pearl-Files-78798192">24charlie.deviantart.com</a>
-<br>Coding by: <a href="http://www.mijnpress.nl">MijnPress.nl</a> <a href="http://twitter.com/#!/ramonfincken">Twitter profile</a>
+<br>Coding by: <a href="http://www.mijnpress.nl">MijnPress.nl</a> <a href="http://twitter.com/#!/ramonfincken">Twitter profile</a> <a href="http://wordpress.org/extend/plugins/profile/ramon-fincken">More plugins</a>
 
 == Installation ==
 
