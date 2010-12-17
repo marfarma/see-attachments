@@ -36,6 +36,10 @@
  * Added: get_plugin_url : $file = __FILE__
  * > To fix when multiple plugins use this framework.
  * Added: 'See attachments'
+ * 
+ * 1.3.1
+ * Modified: addPluginSubMenu
+ * Added: New plugins
  * ------------------------------------------------------------------
  * 
  */
@@ -48,14 +52,14 @@ class mijnpress_plugin_framework
 {
     var $showcredits = true;
     var $showcredits_fordevelopers = true;
-    var $all_plugins = array('Admin renamer extended','Find replace','Simple add pages or posts','Force apply terms and conditions','GTmetrix website performance','Antispam for all fields','Mass Delete Tags','Auto Prune Posts','Warm cache','See attachments');
+    var $all_plugins = array('Admin renamer extended','Find replace','Simple add pages or posts','Force apply terms and conditions','GTmetrix website performance','Antispam for all fields','Mass Delete Tags','Auto Prune Posts','Warm cache','See attachments','Automatic Comment Scheduler','Register plus redux export users');
     
     /**
      * Left menu display in Plugin menu
      * @author     Ramon Fincken
      */
-    function addPluginSubMenu($title,$function, $file, $capability = 10) {    
-        add_submenu_page("plugins.php", $title, $title, $capability, $file, $function);
+    function addPluginSubMenu($title,$function, $file, $capability = 10, $where = "plugins.php") {    
+        add_submenu_page($where, $title, $title, $capability, $file, $function);
     }
 
     /**

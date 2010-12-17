@@ -4,7 +4,7 @@ Donate link: http://donate.ramonfincken.com
 Tags: post,page,attach,attachment,see,view,list,show
 Requires at least: 2.0.2
 Tested up to: 3.0.3
-Stable tag: 1.2
+Stable tag: 1.2.1
 
 Shows all attachments for a post or page in a box on the edit page.
 
