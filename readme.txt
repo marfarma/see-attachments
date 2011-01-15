@@ -3,7 +3,7 @@ Contributors: Ramon Fincken
 Donate link: http://donate.ramonfincken.com
 Tags: post,page,attach,attachment,see,view,list,show,post,custom,type
 Requires at least: 2.0.2
-Tested up to: 3.0.3
+Tested up to: 3.0.4
 Stable tag: 1.3.1
 
 Shows all attachments for a post or page in a box on the edit page. Supports all custom post types.
