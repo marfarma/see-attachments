@@ -3,7 +3,7 @@
  Plugin Name: See attachments
  Plugin URI: http://www.mijnpress.nl
  Description: Shows all attachments for a post or page
- Version: 1.2.1
+ Version: 1.3.1
  Author: Ramon Fincken
  Author URI: http://www.mijnpress.nl
  Images by: http://24charlie.deviantart.com/art/Black-Pearl-Files-78798192
@@ -108,13 +108,14 @@ function plugin_see_attachments_inner_custom_box($post) {
 	}
 }
 
-/* Adds a box to the main column on the Post and Page edit screens */
+/* Adds a box to the main column on all post_type edit screens */
 function plugin_see_attachments_add_custom_box() {
-	add_meta_box( 'plugin_see_attachments_sectionid', __( 'See attachments', 'plugin_see_attachments' ),
-                'plugin_see_attachments_inner_custom_box', 'post' );
-	add_meta_box( 'plugin_see_attachments_sectionid', __( 'See attachments', 'plugin_see_attachments' ),
-                'plugin_see_attachments_inner_custom_box', 'page' );
+	$post_types=get_post_types('','names'); 
+	foreach ($post_types as $post_type ) {
+		add_meta_box( 'plugin_see_attachments_sectionid', __( 'See attachments', 'plugin_see_attachments' ), 'plugin_see_attachments_inner_custom_box', $post_type );
+	}  
 }
-/* Define the custom box */
+
+/* Define the custom boxes */
 add_action('add_meta_boxes', 'plugin_see_attachments_add_custom_box');
 ?>
