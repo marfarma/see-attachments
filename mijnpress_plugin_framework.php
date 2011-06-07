@@ -40,6 +40,15 @@
  * 1.3.1
  * Modified: addPluginSubMenu
  * Added: New plugins
+ * 
+ * 1.3.2
+ * Added: New plugins
+ * 
+ * 1.3.3
+ * Added: Plugin support url
+ * 
+ * 1.4
+ * Changed: is_admin as this gives problems on multisite installs
  * ------------------------------------------------------------------
  * 
  */
@@ -52,14 +61,14 @@ class mijnpress_plugin_framework
 {
     var $showcredits = true;
     var $showcredits_fordevelopers = true;
-    var $all_plugins = array('Admin renamer extended','Find replace','Simple add pages or posts','Force apply terms and conditions','GTmetrix website performance','Antispam for all fields','Mass Delete Tags','Auto Prune Posts','Warm cache','See attachments','Automatic Comment Scheduler','Register plus redux export users');
+    var $all_plugins = array('Admin renamer extended','Find replace','Simple add pages or posts','Force apply terms and conditions','GTmetrix website performance','Antispam for all fields','Mass Delete Tags','Auto Prune Posts','Warm cache','See attachments','Automatic Comment Scheduler','Register plus redux export users','Subscribe2 widget','Define Constants');
     
     /**
      * Left menu display in Plugin menu
      * @author     Ramon Fincken
      */
-    function addPluginSubMenu($title,$function, $file, $capability = 10, $where = "plugins.php") {    
-        add_submenu_page($where, $title, $title, $capability, $file, $function);
+    function addPluginSubMenu($title,$function, $file, $capability = 10, $where = "plugins.php") {
+    	add_submenu_page($where, $title, $title, $capability, $file, $function);
     }
 
     /**
@@ -72,13 +81,23 @@ class mijnpress_plugin_framework
         {
             if($config_url) $links[] = '<a href="'.$config_url.'">' . __('Settings') . '</a>';
             $links[] = '<a href="http://donate.ramonfincken.com">' . __('Donate') . '</a>';
+            $links[] = '<a href="http://pluginsupport.mijnpress.nl">' . __('Support') . '</a>';
             $links[] = '<a href="http://www.mijnpress.nl">' . __('Custom WordPress coding nodig?') . '</a>';
         }
         return $links;
     }
 
+    /**
+     * Checks if user is admin or has plugin caps.
+     */
 	function is_admin()
 	{
+		if(is_multisite())
+		{
+			// TODO fix this, for now rely on WP roles ( I have tested this 07062011 )
+			return true;
+		}		
+		
 		require_once(ABSPATH . WPINC . '/pluggable.php');
 		$current_user = wp_get_current_user();
 		$current_user_id = ! empty($current_user) ? $current_user->id : 0;
@@ -191,6 +210,7 @@ function mijnpress_plugin_framework_showcredits($plugin_title,$all_plugins)
             This plugin was created by Ramon Fincken.<br>
 He likes to create WordPress websites and plugins (currently only Dutch customers) and he is co-admin at the <a href="http://www.linkedin.com/groups?about=&gid=1644947&trk=anet_ug_grppro">Dutch LinkedIn WordPress group</a>.<br/><br/>Visit his WordPress website at: <a href="http://www.mijnpress.nl">MijnPress.nl</a><br/>
 If you are a coder, you might like to visit <a href="http://www.ramonfincken.com/tag/wordpress.html">his WordPress blogposts</a>.
+<br/><br/><a href="http://pluginsupport.mijnpress.nl">Is this plugin broken? Report it here</a>
 <br/><br/><a href="http://donate.ramonfincken.com/">PayPal Donations</a> (even as small as $1,- or &euro;1,- are welcome!.
             
         </div>
