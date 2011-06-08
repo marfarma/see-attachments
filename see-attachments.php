@@ -3,7 +3,7 @@
  Plugin Name: See attachments
  Plugin URI: http://www.mijnpress.nl
  Description: Shows all attachments for a post or page
- Version: 1.3.1
+ Version: 1.5
  Author: Ramon Fincken
  Author URI: http://www.mijnpress.nl
  Images by: http://24charlie.deviantart.com/art/Black-Pearl-Files-78798192
