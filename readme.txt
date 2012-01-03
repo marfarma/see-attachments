@@ -4,7 +4,7 @@ Donate link: http://donate.ramonfincken.com
 Tags: post,page,attach,attachment,see,view,list,show,post,custom,type
 Requires at least: 2.0.2
 Tested up to: 3.1.3
-Stable tag: 1.5
+Stable tag: 1.5.1
 
 Shows all attachments for a post or page in a box on the edit page. Supports all custom post types.
 
@@ -33,7 +33,6 @@ I always check my tweets, so mention my name with @ramonfincken and your problem
 == Changelog ==
 = 1.5.1 =
 Added: Better layout, thanks to Derk at http://www.inpoint.nl
-
 
 = 1.5 =
 Bugfix: Framework did not work on multisite, is_admin() problem.<br>If anyone could help me with that ? :)
