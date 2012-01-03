@@ -31,6 +31,10 @@ I always check my tweets, so mention my name with @ramonfincken and your problem
 
 
 == Changelog ==
+= 1.5.1 =
+Added: Better layout, thanks to Derk at http://www.inpoint.nl
+
+
 = 1.5 =
 Bugfix: Framework did not work on multisite, is_admin() problem.<br>If anyone could help me with that ? :)
 

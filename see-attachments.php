@@ -3,7 +3,7 @@
  Plugin Name: See attachments
  Plugin URI: http://www.mijnpress.nl
  Description: Shows all attachments for a post or page
- Version: 1.5
+ Version: 1.5.1
  Author: Ramon Fincken
  Author URI: http://www.mijnpress.nl
  Images by: http://24charlie.deviantart.com/art/Black-Pearl-Files-78798192
@@ -68,8 +68,8 @@ function plugin_see_attachments_inner_custom_box($post) {
 		foreach ($attachments as $attachment) {
 			$i++;
 			echo "\n";
-			echo '<div style="float: left; border: 1px solid; height: 190px; margin-bottom: 5px; margin-right: 5px;">';
-			echo '<p>Attachment '.$i.'</p>';
+			echo '<div style="float: left; border: 1px solid #dfdfdf; margin-bottom: 5px; margin-right: 5px;"><div style="border: 1px solid #fff; padding: 0 5px 0 5px; min-width: 120px; height: 170px; ">';
+			echo '<p style="margin-bottom: 0;"><small>Bijlage '.$i.'</small></p>';
 
 			$icon = wp_mime_type_icon($attachment->post_mime_type);
 			$temp = end(explode('/',$icon));
@@ -91,20 +91,20 @@ function plugin_see_attachments_inner_custom_box($post) {
 			}
 
 			$title = apply_filters('the_title', $attachment->post_title);
-			$icon_html = '<a href="'.$attachment->guid.'" target="_blank"><img src="'.$icon.'" style="max-width: 128px; max-height: 128px;"></a>';
+			$icon_html = '<a href="'.$attachment->guid.'" target="_blank"><img src="'.$icon.'" style="max-width: 80px; max-height: 80px;"></a>';
 			$href_human = end(explode('uploads/',$attachment->guid));
 			
-			echo '<p><strong>'.$title.'</strong></p>';
-			echo '<p>Link: <br/><a href="'.$attachment->guid.'" target="_blank">'.$href_human.'</a></p>';
-			echo '<p>Type or preview:<br/>'.$icon_html.'</p>';
+			echo '<p style="margin: 0;"><strong>'.$title.'</strong></p>';
+			echo '<p style="line-height: 12px;"><small>Link: <br/><a href="'.$attachment->guid.'" target="_blank">'.$href_human.'</a></small></p>';
+			echo '<p style="text-align: center; padding-top: 5px;">'.$icon_html.'</p>';
 			
-			echo '</div> <!-- end div for attachment -->';
+			echo '</div></div><!-- end div for attachment -->';
 		}
 		echo '<div style="clear: both;"></div>';
 	}
 	else
 	{
-		echo '<div style="clear: both;">'.__('No attachments found').'</div>';
+		echo '<div style="clear: both;">'.__('Geen bijlages gevonden.').'</div>';
 	}
 }
 
@@ -112,7 +112,7 @@ function plugin_see_attachments_inner_custom_box($post) {
 function plugin_see_attachments_add_custom_box() {
 	$post_types=get_post_types('','names'); 
 	foreach ($post_types as $post_type ) {
-		add_meta_box( 'plugin_see_attachments_sectionid', __( 'See attachments', 'plugin_see_attachments' ), 'plugin_see_attachments_inner_custom_box', $post_type );
+		add_meta_box( 'plugin_see_attachments_sectionid', __( 'Bijlages', 'plugin_see_attachments' ), 'plugin_see_attachments_inner_custom_box', $post_type );
 	}  
 }
 
