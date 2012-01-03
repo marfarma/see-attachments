@@ -49,6 +49,9 @@
  * 
  * 1.4
  * Changed: is_admin as this gives problems on multisite installs
+ * 
+ * 1.4.1
+ * Added: New plugins
  * ------------------------------------------------------------------
  * 
  */
@@ -61,7 +64,7 @@ class mijnpress_plugin_framework
 {
     var $showcredits = true;
     var $showcredits_fordevelopers = true;
-    var $all_plugins = array('Admin renamer extended','Find replace','Simple add pages or posts','Force apply terms and conditions','GTmetrix website performance','Antispam for all fields','Mass Delete Tags','Auto Prune Posts','Warm cache','See attachments','Automatic Comment Scheduler','Register plus redux export users','Subscribe2 widget','Define Constants');
+    var $all_plugins = array('Admin renamer extended','Find replace','Simple add pages or posts','Force apply terms and conditions','GTmetrix website performance','Antispam for all fields','Mass Delete Tags','Auto Prune Posts','Warm cache','See attachments','Automatic Comment Scheduler','Register plus redux export users','Subscribe2 widget','Define Constants','Mass Delete Unused Tags','Prevent core update');
     
     /**
      * Left menu display in Plugin menu
